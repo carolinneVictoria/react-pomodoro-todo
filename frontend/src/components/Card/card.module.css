@@ -1,0 +1,326 @@
+button {
+    all: unset;
+}
+
+.principalcard {
+    background: linear-gradient(180deg, var(--color-bg-card) 0%, var(--color-bg-soft) 100%);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px;
+    border: 1px solid var(--color-border);
+    padding: 40px;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.principalcard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+
+.btnoption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 190px;
+    flex: 1;
+    max-width: 205px;
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    padding: 14px 16px;
+    color: var(--color-primary);
+    border-radius: var(--radius-pill);
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnoption:hover {
+    background-color: var(--color-bg-soft);
+}
+
+.btnoption.ativo {
+    background-color: var(--color-bg-soft);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.btnoption img {
+    width: 25px;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(76%) saturate(3627%) hue-rotate(324deg) brightness(86%) contrast(96%);
+}
+
+.btnoption button,
+.btniniciar button,
+.btnreiniciar button,
+.todoActions button {
+    cursor: pointer;
+}
+
+.btniniciar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 130px;
+    background-color: var(--color-accent);
+    padding: 14px 16px;
+    color: #ffffff;
+    border-radius: var(--radius-pill);
+    font-size: 1.125rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btniniciar:hover {
+    background-color: #d82e37;
+    transform: scale(1.03);
+}
+
+.btniniciar img {
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.btnreiniciar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-bg-card);
+    padding: 16px;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--color-border);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btnreiniciar:hover {
+    background-color: var(--color-bg-soft);
+    transform: scale(1.05);
+}
+
+.btnreiniciar img {
+    width: 25px;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(76%) saturate(3627%) hue-rotate(324deg) brightness(86%) contrast(96%);
+}
+
+.tomatoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.text h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.todoActions {
+    background-color: var(--color-bg-soft);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 4px;
+    border-radius: var(--radius-pill);
+    gap: 4px;
+    border: 1px solid var(--color-border);
+}
+
+.todoActions button {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.active {
+    background-color: var(--color-bg-card);
+    color: var(--color-primary);
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+}
+
+.todoActions button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--color-primary);
+}
+
+.tarefaContainer {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    max-height: 340px;
+    overflow-y: auto;
+    padding-right: 12px;
+}
+
+.tarefaContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tarefaContainer::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-pill);
+}
+
+.divisor {
+    margin: 24px 0;
+    border: none;
+    border-top: 1px solid var(--color-border);
+}
+
+.progressoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.progressoContainer h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.progressoInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.barra {
+    flex: 1;
+    min-width: 80px;
+    max-width: 220px;
+    height: 10px;
+    background: var(--color-bg-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.preenchimento {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .principalcard {
+        min-height: 480px;
+        padding: 32px 28px;
+    }
+
+    .btnoption {
+        max-width: 200px;
+        font-size: 0.95rem;
+    }
+
+    .buttonGroup {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .principalcard {
+        min-height: auto;
+        padding: 24px 20px;
+        border-radius: 24px;
+    }
+
+    .text h2 {
+        font-size: 1.25rem;
+    }
+
+    .btnoption {
+        min-width: 140px;
+        max-width: none;
+        flex: 1 1 calc(50% - 8px);
+        padding: 12px;
+        font-size: 0.875rem;
+    }
+
+    .btnoption img,
+    .btniniciar img,
+    .btnreiniciar img {
+        width: 20px;
+    }
+
+    .btniniciar {
+        font-size: 1rem;
+        min-width: 110px;
+    }
+
+    .todoActions button {
+        font-size: 0.875rem;
+        padding: 8px 10px;
+    }
+
+    .tarefaContainer {
+        max-height: 280px;
+    }
+
+    .progressoContainer {
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .progressoContainer h4 {
+        text-align: center;
+    }
+
+    .progressoInfo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .barra {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btnoption {
+        flex: 1 1 100%;
+    }
+
+    .buttonGroup {
+        gap: 10px;
+    }
+}

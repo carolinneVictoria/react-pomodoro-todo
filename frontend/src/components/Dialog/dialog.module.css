@@ -1,0 +1,48 @@
+@keyframes dialogIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+::backdrop {
+    background-color: rgba(136, 19, 55, 0.45);
+    backdrop-filter: blur(4px);
+}
+
+.dialog {
+    width: 500px;
+    max-width: calc(100vw - 32px);
+    padding: 50px;
+    border: 2px solid var(--color-primary);
+    border-radius: 32px;
+    background: linear-gradient(180deg, var(--color-bg-card) 0%, var(--color-bg-soft) 100%);
+    box-shadow: var(--shadow-lift);
+    animation: dialogIn 0.25s ease-out;
+    margin: auto;
+}
+
+.dialog .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .dialog {
+        width: calc(100vw - 24px);
+        padding: 28px 20px;
+        border-radius: 24px;
+    }
+}

@@ -1,0 +1,11 @@
+.tarefas{
+    background-color: #ffffff;
+    color:#881337;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
