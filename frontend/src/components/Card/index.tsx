@@ -57,16 +57,15 @@ export const CardPomodoro = () => {
         <>
             <div className={styles.buttonGroup}>
                 {MODE_OPTIONS.map(({ key, icon, alt }) => (
-                    <div
+                    <button
                         key={key}
                         className={`${styles.btnoption} ${timer.mode === key ? styles.ativo : ""
                             }`}
+                        onClick={() => timer.changeMode(key)}
                     >
                         <img src={icon} alt={alt} />
-                        <button onClick={() => timer.changeMode(key)}>
-                            {timer.modes[key].label}
-                        </button>
-                    </div>
+                        <span>{timer.modes[key].label}</span>
+                    </button>
                 ))}
             </div>
 
@@ -75,21 +74,23 @@ export const CardPomodoro = () => {
             </div>
 
             <div className={styles.buttonGroup}>
-                <div className={styles.btniniciar}>
+                <button
+                    className={styles.btniniciar}
+                    onClick={timer.toggle}
+                >
                     <img
                         src={timer.isRunning ? pause : play}
                         alt={timer.isRunning ? "Pausar" : "Iniciar"}
                     />
-                    <button onClick={timer.toggle}>
-                        {timer.isRunning ? "Pausar" : "Iniciar"}
-                    </button>
-                </div>
+                    <span>{timer.isRunning ? "Pausar" : "Iniciar"}</span>
+                </button>
 
-                <div className={styles.btnreiniciar}>
-                    <button onClick={timer.reset}>
-                        <img src={reiniciar} alt="Reiniciar" />
-                    </button>
-                </div>
+                <button
+                    className={styles.btnreiniciar}
+                    onClick={timer.reset}
+                >
+                    <img src={reiniciar} alt="Reiniciar" />
+                </button>
             </div>
         </>
     );
